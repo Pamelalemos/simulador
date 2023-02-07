@@ -66,7 +66,7 @@ buttonContinue.addEventListener("click", () => {
   form.classList.remove("disabled");
   thankYou.classList.add("disabled");
   form.reset();
-  cardName.innerText = "Jane Appleseed";
+  cardName.innerText = "Pamela Lemos";
   cardNumber.innerText = "0000 0000 0000 0000";
   cardMonth.innerText = "00";
   cardYear.innerText = "00";
