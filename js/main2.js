@@ -10,22 +10,22 @@ const opciones = {
   },
 };
 
+// Declaramos la variable carrito en el ámbito global
+let carrito = [];
+
 // Cargamos los datos desde un archivo JSON local
 const listado = document.getElementById("listado");
 
-const listadoProductos = "./json/productos.json"
+const listadoProductos = "./js/productos.json";
 
 fetch(listadoProductos)
   .then((respuesta) => respuesta.json())
   .then((datos) => {
-    datos.forEach((producto) => {
-      listado.innerHTML += `<h2>Nombre: ${producto.nombre} </h2>
-      <p> Precio: ${producto.precio}</p>
-      <p> ID: ${producto.id}</p>`;
-    });
+    listaProductos = datos;
   })
   .catch((error) => console.log(error))
   .finally(() => console.log("Proceso Finalizado"));
+
 // Función para agregar un producto al carrito
 function agregarAlCarrito(producto) {
   carrito.push(producto);
@@ -49,7 +49,7 @@ function generarDOM() {
     boton.addEventListener("click", () => {
       const seleccion = prompt("¿Qué producto desea agregar al carrito?");
       const producto = productos.find(
-        (producto) => producto.title === seleccion
+        (producto) => producto.nombre === seleccion
       );
       opciones[opcion].accion(producto);
     });
