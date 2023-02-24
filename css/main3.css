@@ -1,0 +1,64 @@
+body {
+  font-family: "Amatic SC", cursive;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #f9f9f9;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.producto {
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: gold;
+}
+
+.producto h3 {
+  margin-top: 0;
+}
+
+.producto p {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.agregar-carrito {
+  background-color: black;
+  color: gold;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.agregar-carrito:hover {
+  background-color: #3e8e41;
+}
+
+.carrito {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: black;
+}
+
+.carrito h2 {
+  margin-top: 0;
+  color: #f9f9f9;
+}
